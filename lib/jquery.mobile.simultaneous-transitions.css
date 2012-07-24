@@ -1,0 +1,255 @@
+/*
+jquery.mobile.simultaneous-transitions.css
+Add transitions in JQuery Mobile 1.1.1. with simultaneous transitions from 1.0.1 (with -sim suffix)
+Versiion 1.0
+Simultaneous transitions adapted from jQuery Mobile 1.0.1 for use with jQuery Mobile 1.1.1
+Copyright (c), 2012 Watusiware Corporation
+Distributed under the MIT License
+*/
+@charset "utf-8";
+
+.slide-sim,
+.slideup-sim,
+.slidedown-sim,
+.fade-sim,
+.flip-sim,
+.pop-sim
+
+ {
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 350ms;
+}
+
+
+
+.slide-sim.out {
+  -webkit-transform: translateX(-100%);
+  -webkit-animation-name: slideoutsimtoleft;
+}
+
+.slide-sim.in {
+  -webkit-transform: translateX(0);
+  -webkit-animation-name: slideinsimfromright;
+}
+
+.slide-sim.out.reverse {
+  -webkit-transform: translateX(100%);
+  -webkit-animation-name: slideoutsimtoright;
+}
+
+.slide-sim.in.reverse {
+  -webkit-transform: translateX(0);
+  -webkit-animation-name: slideinsimfromleft;
+}
+
+.slideup-sim.out {
+  -webkit-animation-name: dontmovesim;
+  z-index: 0;
+}
+
+.slideup-sim.in {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinsimfrombottom;
+  z-index: 10;
+}
+
+.slideup-sim.in.reverse {
+  z-index: 0;
+  -webkit-animation-name: dontmovesim;
+}
+
+.slideup-sim.out.reverse {
+  -webkit-transform: translateY(100%);
+  z-index: 10;
+  -webkit-animation-name: slideoutsimtobottom;
+}
+
+.slidedown-sim {
+  -webkit-animation-name: dontmove;
+  z-index: 0;
+}
+
+.slidedown-sim.in {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinsimfromtop;
+  z-index: 10;
+}
+
+.slidedown-sim.in.reverse {
+  z-index: 0;
+  -webkit-animation-name: dontmovesim;
+}
+
+.slidedown-sim.out.reverse {
+  -webkit-transform: translateY(-100%);
+  z-index: 10;
+  -webkit-animation-name: slideoutsimtotop;
+}
+
+@-webkit-keyframes slideinsimfromright {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(0); }
+}
+
+@-webkit-keyframes slideinsimfromleft {
+    from { -webkit-transform: translateX(-100%); }
+    to { -webkit-transform: translateX(0); }
+}
+
+@-webkit-keyframes slideoutsimtoleft {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slideoutsimtoright {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(100%); }
+}
+
+@-webkit-keyframes slideinsimfromtop {
+    from { -webkit-transform: translateY(-100%); }
+    to { -webkit-transform: translateY(0); }
+}
+
+@-webkit-keyframes slideinsimfrombottom {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(0); }
+}
+
+@-webkit-keyframes slideoutsimtobottom {
+    from { -webkit-transform: translateY(0); }
+    to { -webkit-transform: translateY(100%); }
+}
+
+@-webkit-keyframes slideoutsimtotop {
+    from { -webkit-transform: translateY(0); }
+    to { -webkit-transform: translateY(-100%); }
+}
+@-webkit-keyframes fadeinsim {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeoutsim {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-sim.out {
+  z-index: 0;
+  -webkit-animation-name: fadeoutsim;
+}
+
+.fade-sim.in {
+  opacity: 1;
+  z-index: 10;
+  -webkit-animation-name: fadeinsim;
+}
+
+.viewport-flip-sim {
+    -webkit-perspective: 1000;
+    position: absolute;
+}
+
+.flip-sim {
+  -webkit-animation-duration: .65s;
+  -webkit-backface-visibility:hidden;
+  -webkit-transform:translateX(0); /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
+}
+
+.flip-sim.out {
+  -webkit-transform: rotateY(-180deg) scale(.8);
+  -webkit-animation-name: flipoutsimtoleft;
+}
+
+.flip-sim.in {
+  -webkit-transform: rotateY(0) scale(1);
+  -webkit-animation-name: flipinsimfromleft;
+}
+
+/* Shake it all about */
+
+.flip-sim.out.reverse {
+  -webkit-transform: rotateY(180deg) scale(.8);
+  -webkit-animation-name: flipoutsimtoright;
+}
+
+.flip-sim.in.reverse {
+  -webkit-transform: rotateY(0) scale(1);
+  -webkit-animation-name: flipinsimfromright;
+}
+
+@-webkit-keyframes flipinsimfromright {
+    from { -webkit-transform: rotateY(-180deg) scale(.8); }
+    to { -webkit-transform: rotateY(0) scale(1); }
+}
+
+@-webkit-keyframes flipinsimfromleft {
+    from { -webkit-transform: rotateY(180deg) scale(.8); }
+    to { -webkit-transform: rotateY(0) scale(1); }
+}
+
+@-webkit-keyframes flipoutsimtoleft {
+    from { -webkit-transform: rotateY(0) scale(1); }
+    to { -webkit-transform: rotateY(-180deg) scale(.8); }
+}
+
+@-webkit-keyframes flipoutsimtoright {
+    from { -webkit-transform: rotateY(0) scale(1); }
+    to { -webkit-transform: rotateY(180deg) scale(.8); }
+}
+
+
+/* Hackish, but reliable. */
+
+@-webkit-keyframes dontmovesim {
+    from { opacity: 1; }
+    to { opacity: 1; }
+}
+
+.pop-sim {
+  -webkit-transform-origin: 50% 50%;
+}
+
+.pop-sim.in {
+  -webkit-transform: scale(1);
+    opacity: 1;
+  -webkit-animation-name: popinsim;
+  z-index: 10;
+}
+
+.pop-sim.in.reverse {
+  z-index: 0;
+  -webkit-animation-name: dontmovesim;
+}
+
+.pop-sim.out.reverse {
+  -webkit-transform: scale(.2);
+  opacity: 0;
+  -webkit-animation-name: popoutsim;
+  z-index: 10;
+}
+
+@-webkit-keyframes popinsim {
+    from {
+        -webkit-transform: scale(.2);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes popoutsim {
+    from {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: scale(.2);
+        opacity: 0;
+    }
+}
+
+

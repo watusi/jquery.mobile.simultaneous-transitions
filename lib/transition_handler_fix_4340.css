@@ -1,0 +1,12 @@
+/* Partially addresses issue #4340
+ * This is from JQM commit 4b958838 (?), and will be included in some future release of JQM (?)
+ * Load this file after jquery.mobile.structure.css or jquery.mobile.css and before loading jQuery
+ * Mobile Javascript
+ *
+ * Requires transition_handler_fix_4340.js as well
+ */
+
+.ui-mobile-viewport-transitioning,
+.ui-mobile-viewport-transitioning .ui-page {
+  overflow: visible;
+}
