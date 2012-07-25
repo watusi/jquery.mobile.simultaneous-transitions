@@ -1,19 +1,19 @@
 /*
 jquery.mobile.simultaneous-transitions.css
 Replace default transitions in JQuery Mobile 1.1.1. with simultaneous transitions from 1.0.1
-Versiion 1.0
+Versiion 1.0.1
 Simultaneous transitions adapted from jQuery Mobile 1.0.1 for use with jQuery Mobile 1.1.1
 Copyright (c), 2012 Watusiware Corporation
 Distributed under the MIT License
 */
 @charset "utf-8";
 
-.slide,
-.slideup,
-.slidedown,
-.fade,
-.flip,
-.pop {
+.slide.in, slide.out,
+.slideup.in, slidedeup.out,
+.slidedown.in, slidedown.out,
+.fade.in, fade.out,
+.flip.in, flip.out
+.pop,in, pop.out {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-duration: 350ms;
 }
