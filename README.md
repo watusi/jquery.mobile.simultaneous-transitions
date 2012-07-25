@@ -28,10 +28,10 @@ The default transitions (starting with jQuery Mobile 1.1) now use a sequential t
 This means that the "out" transition is first performed, followed by the "in" transition. Additional
 transition steps have been added to attempt to hide scrolling.
 
-Unfortunately, these transitions do not have the smooth appearace of the previous, simultaneous
+Unfortunately, these transitions do not have the smooth appearance of the previous, simultaneous
 transitions. Many find them distracting, unattractive, and just plain "goofy". They have been
 widely un-liked by much of the jQuery Mobile developer community, particularly by those using
-jQuery Mobile as part of an environment for build native apps for mobile devices. *Apple has
+jQuery Mobile as part of an environment for building native apps for mobile devices. *Apple has
 shown an unwillingness to accept applications using these transitions in the App Store, because
 their appearance does not meet with their appearance standards.*
 
