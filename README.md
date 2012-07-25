@@ -13,8 +13,8 @@ all work simultaneously - that is, the "in" and "out" transitions occur at the s
 These transitions have a very smooth appearance, and have been well-liked by users and developers,
 but have a drawback: they don't hide the necessary scrolling of outgoing pages to the top and
 incoming pages to a remembered scroll position. However, this does not occur if (as if often the
-case forwebApps or native apps) the page does not need to be scrolled. Pages do not need to be
-scrolled during transition if their height does not exceed the viewport height. This is true if
+case for webApps or native apps) the page does not need to be scrolled. Pages do not need to be
+scrolled during transitions if their height does not exceed the viewport height. This is true if
 pages are designed to viewport height.
 
 As part of a design that does not exceed viewport height, a site or app might use a scroller,
@@ -31,9 +31,9 @@ transition steps have been added to attempt to hide scrolling.
 Unfortunately, these transitions do not have the smooth appearace of the previous, simultaneous
 transitions. Many find them distracting, unattractive, and just plain "goofy". They have been
 widely un-liked by much of the jQuery Mobile developer community, particularly by those using
-jQuery Mobile as part of an environment for build native apps for mobile devices. Apple has
+jQuery Mobile as part of an environment for build native apps for mobile devices. *Apple has
 shown an unwillingness to accept applications using these transitions in the App Store, because
-their appearance does not meet with their appearance standards.
+their appearance does not meet with their appearance standards.*
 
 (As a small concession, the `slide` transition in jQuery Mobile does still use a simultaneous
 transition.)
