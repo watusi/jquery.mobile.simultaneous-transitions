@@ -1,7 +1,8 @@
-jquery.mobile.simultaneous-transitions, version 1.0.2
-=====================================================
+jquery.mobile.simultaneous-transitions, version 1.1
+===================================================
 
-Easy drop-in retrofit of simultaneous (1.0/jqTouch-like) transitions for jQuery Mobile 1.1.1 or
+Easy drop-in retrofit of simultaneous (1.0/jqTouch-like) transitions, and simple
+(simultaneous, non-scrolling) transition handler for jQuery Mobile 1.1.1 or
 later.
 
 Purpose
@@ -22,7 +23,8 @@ such as `jquery.mobile.iscrollview`, or `jquery.mobile.scrollview`. However, thi
 requirement for using simultaneous transitions - all that is necessary is that either:
 
 - the page height does not exceed the viewport height, or
-- the developer must be willing to accept visible scrolling of pages during transitions
+- the developer must be willing to accept visible scrolling of pages during transitions (if not
+using the included simple transition handler)
 
 The default transitions (starting with jQuery Mobile 1.1) now use a sequential transition handler.
 This means that the "out" transition is first performed, followed by the "in" transition. Additional
@@ -40,6 +42,10 @@ transition.)
 
 jQuery Mobile does still include a simultaneous transition handler. However, the simultaneous
 transitions have been removed, so it is up to developers to add them if wanted.
+
+This repo also include an optional, simple simultaneous, non-scrolling transition handler similar
+to the one included in jQuery Mobile 1.0 or 1.0.1 (but brought up to date for jQuery Mobile 1.1).
+These transitions work optimally when used with this optional transition handler.
 
 This repo provides an easy way to either replace the corresponding default transitions with
 those from jQuery Mobile 1.0.1, or else add new simultaneous transitions, which have the same name
@@ -84,8 +90,38 @@ It currently only provides transitions for Webkit browsers. (Only webkit transit
 provided with jQuery Mobile 1.0 and 1.0.1.) I do plan on adding transitions for other browsers
 in a future version.
 
-Optional Transition Handler Fix
--------------------------------
+Optional Simple Transition Handler
+----------------------------------
+This repo provides an optional, simple simultaneous, non-scrolling transition handler. It is
+similar to the transition handler included with jQuery Mobile 1.0 or 1.0.1, but has been modified
+slightly to bring it up-to-date with jQuery Mobile 1.1.1.
+
+The simultaneous transitions included in this repo work best when used with this simple transition
+handler.
+
+To use the simple transition handler, you need to load `jquery.mobile.transition-handler-simple.js`
+from your `<head>`, after loading jQuery, and before loading jQuery Mobile or any other
+Javscript from this repo. (See the example HTML structure section, below.)
+
+This adds the `simple` transition handler to the transition handler table in jQuery Mobile, but
+it does not assign it to any transitions.
+
+You can subsequently add entries to the transition handler table to use this handler with any
+sequential transition. Two Javascript files are included that will add the necessary handler
+entries to either add the transitions included in this repo as new transitions (with a suffix
+of `-sim`) or else replace the corresponding transitions with the same names.
+
+-jquery.mobile-transitions-replace-simple.js
+-jquery.mobile.transitions-simple.js
+
+
+Optional Transition Handler Fix (not recommended)
+-------------------------------------------------
+*Note: This transition handler fix was included in this repo prior to the development of the
+simple transition handler. For optimal results, use the simple transition handler. I'm leaving
+it in the repo for the benefit of those who might like to use the latest, official, development
+version from the jQuery Mobile repo.*
+
 An additional set of CSS and JS files are provided that fix jQuery Mobile bug #4340. This fix
 replaces both the simultaneous and sequential transition handlers with new ones extracted from
 unreleased jQuery Mobile code (git master), which is expected to be included in a future release
@@ -95,10 +131,10 @@ This should be considered a temporary fix, untill these modified transition hand
 incorporated in an official release of jQuery Mobile. These fixes are needed on some browsers
 (notably iOS) for smooth, artifact-free transitions.
 
-Load `transition_handler_fix_4340.js` after loading `jquery.js` and before loading
+Load `jquery.mobile.transition_handler-fix-4340.js` after loading `jquery.js` and before loading
 `jquery.mobile.simultaneous-transitions[-replace].js`.
 
-Load `transition)handler_fix_4340.css` after loading `jquery.mobile.css` or
+Load `jquery.mobile.transition)handler-fix-4340.css` after loading `jquery.mobile.css` or
 `jquery.mobile.structure.css`, and before loading
 `jquery.mobile.simultaneous-transitions[-replace].css`.
 
@@ -143,7 +179,6 @@ Please be careful to observe the correct load order:
 
       <link rel="stylesheet" href="/css/my-theme.css"/>
       <link rel="stylesheet" href="/jqmobile/jquery.mobile.structure-1.1.1.min.css"/>
-      <link rel="stylesheet" href="/css/transition_handler_fix_4340.css"/>
       <link rel="stylesheet" href="/css/jquery.mobile.simultaneous-transitions.css"/>
       <~-- Optional, if you are using jquery.mobile.iscrollview plugin -->
       <link rel="stylesheet" href="/css/jquery.mobile.iscrollview.css"/>
@@ -151,8 +186,8 @@ Please be careful to observe the correct load order:
       <link rel="stylesheet" href="/css/my-application.css"/>
 
       <script src="/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
-      <script src="/js/transition_handler_fix_4340.js"></script>
-      <script src="/js/jquery.mobile.simultaneous-transitions.js"></script>
+      <script src="/js/jquery-mobile-transition-handler-simple.js"></script>
+      <script src="/js/jquery.mobile.simultaneous-transitions-replace-simple.js"></script>
       <script src="/jqmobile/jquery.mobile-1.1.1.min.js"></script>
       <script src="/js/jquery.mobile.iscrollview.js"></script> <!-- Optional -->
     </head>
