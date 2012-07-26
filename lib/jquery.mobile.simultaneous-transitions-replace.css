@@ -1,145 +1,160 @@
 /*
 jquery.mobile.simultaneous-transitions.css
 Replace default transitions in JQuery Mobile 1.1.1. with simultaneous transitions from 1.0.1
-Versiion 1.0.1
+Version 1.0.2
 Simultaneous transitions adapted from jQuery Mobile 1.0.1 for use with jQuery Mobile 1.1.1
 Copyright (c), 2012 Watusiware Corporation
 Distributed under the MIT License
 */
 @charset "utf-8";
 
-.slide.in, slide.out,
-.slideup.in, slidedeup.out,
-.slidedown.in, slidedown.out,
-.fade.in, fade.out,
-.flip.in, flip.out
-.pop,in, pop.out {
+/* We need greater specificity to override the .in, .out rules without
+   affecting transitions we aren't overriding. */
+.slide.in, .slide.out,
+.slideup.in, .slideup.out,
+.slidedown.in, .slidedown.out,
+.fade.in, .fade.out,
+.flip.in, .flip.out,
+.pop,in, .pop.out {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-duration: 350ms;
 }
 
+/* The slide transition (only) in JQM 1.1 is simultaneous (though with slightly different timing
+   than in JQM 1.0.) So, we don't really need to override all of the rules - just the timing.
+   However, we override them anyway, both to provide some insurance against future changes, and to
+   provide a template for user modification. */
+
 .slide.out {
   -webkit-transform: translateX(-100%);
-  -webkit-animation-name: slideouttoleft;
+  -webkit-animation-name: slideouttoleft-sim;
 }
 
 .slide.in {
   -webkit-transform: translateX(0);
-  -webkit-animation-name: slideinfromright;
+  -webkit-animation-name: slideinfromright-sim;
 }
 
 .slide.out.reverse {
   -webkit-transform: translateX(100%);
-  -webkit-animation-name: slideouttoright;
+  -webkit-animation-name: slideouttoright-sim;
 }
 
 .slide.in.reverse {
   -webkit-transform: translateX(0);
-  -webkit-animation-name: slideinfromleft;
+  -webkit-animation-name: slideinfromleft-sim;
 }
 
 .slideup.out {
-  -webkit-animation-name: dontmove;
+  -webkit-animation-name: dontmove-sim;
   z-index: 0;
 }
 
 .slideup.in {
   -webkit-transform: translateY(0);
-  -webkit-animation-name: slideinfrombottom;
+  -webkit-animation-name: slideinfrombottom-sim;
   z-index: 10;
 }
 
 .slideup.in.reverse {
   z-index: 0;
-  -webkit-animation-name: dontmove;
+  -webkit-animation-name: dontmove-sim;
 }
 
 .slideup.out.reverse {
   -webkit-transform: translateY(100%);
   z-index: 10;
-  -webkit-animation-name: slideouttobottom;
+  -webkit-animation-name: slideouttobottom-sim;
 }
 
-.slidedown {
-  -webkit-animation-name: dontmove;
+.slidedown.in,
+.slidedown.out {
+  -webkit-animation-name: dontmove-sim;
   z-index: 0;
 }
 
 .slidedown.in {
   -webkit-transform: translateY(0);
-  -webkit-animation-name: slideinfromtop;
+  -webkit-animation-name: slideinfromtop-sim;
   z-index: 10;
 }
 
 .slidedown.in.reverse {
   z-index: 0;
-  -webkit-animation-name: dontmove;
+  -webkit-animation-name: dontmove-sim;
 }
 
 .slidedown.out.reverse {
   -webkit-transform: translateY(-100%);
   z-index: 10;
-  -webkit-animation-name: slideouttotop;
+  -webkit-animation-name: slideouttotop-sim;
 }
 
-@-webkit-keyframes slideinfromright {
+/* Keyframe sets can't be overridden, at least in WebKit. The *first* keyframe set with a given
+   name is the one used. Rather than split this file into two (so that one can be loaded before
+   and one after the JQM structure CSS) we just define new ones, with a "-sim" suffix.
+
+   For some transitions (such as slide) this isn't necessary, but we do so anyway to provide a
+   template for user modification.  */
+
+@-webkit-keyframes slideinfromright-sim {
     from { -webkit-transform: translateX(100%); }
     to { -webkit-transform: translateX(0); }
 }
 
-@-webkit-keyframes slideinfromleft {
+@-webkit-keyframes slideinfromleft-sim {
     from { -webkit-transform: translateX(-100%); }
     to { -webkit-transform: translateX(0); }
 }
 
-@-webkit-keyframes slideouttoleft {
+@-webkit-keyframes slideouttoleft-sim {
     from { -webkit-transform: translateX(0); }
     to { -webkit-transform: translateX(-100%); }
 }
 
-@-webkit-keyframes slideouttoright {
+@-webkit-keyframes slideouttoright-sim {
     from { -webkit-transform: translateX(0); }
     to { -webkit-transform: translateX(100%); }
 }
 
-@-webkit-keyframes slideinfromtop {
+@-webkit-keyframes slideinfromtop-sim {
     from { -webkit-transform: translateY(-100%); }
     to { -webkit-transform: translateY(0); }
 }
 
-@-webkit-keyframes slideinfrombottom {
+@-webkit-keyframes slideinfrombottom-sim {
     from { -webkit-transform: translateY(100%); }
     to { -webkit-transform: translateY(0); }
 }
 
-@-webkit-keyframes slideouttobottom {
+@-webkit-keyframes slideouttobottom-sim {
     from { -webkit-transform: translateY(0); }
     to { -webkit-transform: translateY(100%); }
 }
 
-@-webkit-keyframes slideouttotop {
+@-webkit-keyframes slideouttotop-sim {
     from { -webkit-transform: translateY(0); }
     to { -webkit-transform: translateY(-100%); }
 }
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadein-sim {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-@-webkit-keyframes fadeout {
+@-webkit-keyframes fadeout-sim {
     from { opacity: 1; }
     to { opacity: 0; }
 }
 
 .fade.out {
   z-index: 0;
-  -webkit-animation-name: fadeout;
+  -webkit-animation-name: fadeout-sim;
 }
 
 .fade.in {
   opacity: 1;
   z-index: 10;
-  -webkit-animation-name: fadein;
+  -webkit-animation-name: fadein-sim;
 }
 
 .viewport-flip {
@@ -147,7 +162,8 @@ Distributed under the MIT License
     position: absolute;
 }
 
-.flip {
+.flip.in,
+.flip.out {
   -webkit-animation-duration: .65s;
   -webkit-backface-visibility:hidden;
   -webkit-transform:translateX(0); /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
@@ -155,78 +171,77 @@ Distributed under the MIT License
 
 .flip.out {
   -webkit-transform: rotateY(-180deg) scale(.8);
-  -webkit-animation-name: flipouttoleft;
+  -webkit-animation-name: flipouttoleft-sim;
 }
 
 .flip.in {
   -webkit-transform: rotateY(0) scale(1);
-  -webkit-animation-name: flipinfromleft;
+  -webkit-animation-name: flipinfromleft-sim;
 }
 
 /* Shake it all about */
 
 .flip.out.reverse {
   -webkit-transform: rotateY(180deg) scale(.8);
-  -webkit-animation-name: flipouttoright;
+  -webkit-animation-name: flipouttoright-sim;
 }
 
 .flip.in.reverse {
   -webkit-transform: rotateY(0) scale(1);
-  -webkit-animation-name: flipinfromright;
+  -webkit-animation-name: flipinfromright-sim;
 }
 
-@-webkit-keyframes flipinfromright {
+@-webkit-keyframes flipinfromright-sim {
     from { -webkit-transform: rotateY(-180deg) scale(.8); }
     to { -webkit-transform: rotateY(0) scale(1); }
 }
 
-@-webkit-keyframes flipinfromleft {
+@-webkit-keyframes flipinfromleft-sim {
     from { -webkit-transform: rotateY(180deg) scale(.8); }
     to { -webkit-transform: rotateY(0) scale(1); }
 }
 
-@-webkit-keyframes flipouttoleft {
+@-webkit-keyframes flipouttoleft-sim {
     from { -webkit-transform: rotateY(0) scale(1); }
     to { -webkit-transform: rotateY(-180deg) scale(.8); }
 }
 
-@-webkit-keyframes flipouttoright {
+@-webkit-keyframes flipouttoright-sim {
     from { -webkit-transform: rotateY(0) scale(1); }
     to { -webkit-transform: rotateY(180deg) scale(.8); }
 }
 
-
 /* Hackish, but reliable. */
-
-@-webkit-keyframes dontmove {
+@-webkit-keyframes dontmove-sim {
     from { opacity: 1; }
     to { opacity: 1; }
 }
 
-.pop {
+.pop.in,
+.pop.out {
   -webkit-transform-origin: 50% 50%;
 }
 
 .pop.in {
   -webkit-transform: scale(1);
     opacity: 1;
-  -webkit-animation-name: popin;
+  -webkit-animation-name: popin-sim;
   z-index: 10;
 }
 
 .pop.in.reverse {
   z-index: 0;
-  -webkit-animation-name: dontmove;
+  -webkit-animation-name: dontmove-sim;
 }
 
 .pop.out.reverse {
   -webkit-transform: scale(.2);
   opacity: 0;
-  -webkit-animation-name: popout;
+  -webkit-animation-name: popout-sim;
   z-index: 10;
 }
 
-@-webkit-keyframes popin {
+@-webkit-keyframes popin-sim {
     from {
         -webkit-transform: scale(.2);
         opacity: 0;
@@ -237,7 +252,7 @@ Distributed under the MIT License
     }
 }
 
-@-webkit-keyframes popout {
+@-webkit-keyframes popou-sim {
     from {
         -webkit-transform: scale(1);
         opacity: 1;
