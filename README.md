@@ -111,8 +111,8 @@ sequential transition. Two Javascript files are included that will add the neces
 entries to either add the transitions included in this repo as new transitions (with a suffix
 of `-sim`) or else replace the corresponding transitions with the same names.
 
-- jquery.mobile-transitions-replace-simple.js
-- jquery.mobile.transitions-simple.js
+- jquery.mobile.simultaneous-transitions-replace-simple.js
+- jquery.mobile.simultaneous-transitions-simple.js
 
 
 Optional Transition Handler Fix (not recommended)
