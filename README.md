@@ -111,8 +111,8 @@ sequential transition. Two Javascript files are included that will add the neces
 entries to either add the transitions included in this repo as new transitions (with a suffix
 of `-sim`) or else replace the corresponding transitions with the same names.
 
--jquery.mobile-transitions-replace-simple.js
--jquery.mobile.transitions-simple.js
+- jquery.mobile-transitions-replace-simple.js
+- jquery.mobile.transitions-simple.js
 
 
 Optional Transition Handler Fix (not recommended)
@@ -180,13 +180,13 @@ Please be careful to observe the correct load order:
       <link rel="stylesheet" href="/css/my-theme.css"/>
       <link rel="stylesheet" href="/jqmobile/jquery.mobile.structure-1.1.1.min.css"/>
       <link rel="stylesheet" href="/css/jquery.mobile.simultaneous-transitions.css"/>
-      <~-- Optional, if you are using jquery.mobile.iscrollview plugin -->
+      <!-- Optional, if you are using jquery.mobile.iscrollview plugin -->
       <link rel="stylesheet" href="/css/jquery.mobile.iscrollview.css"/>
       <link rel="stylesheet" href="/css/jquery.mobile.iscrollview-pull.css"/>
       <link rel="stylesheet" href="/css/my-application.css"/>
 
       <script src="/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
-      <script src="/js/jquery-mobile-transition-handler-simple.js"></script>
+      <script src="/js/jquery.mobile-transition-handler-simple.js"></script>
       <script src="/js/jquery.mobile.simultaneous-transitions-replace-simple.js"></script>
       <script src="/jqmobile/jquery.mobile-1.1.1.min.js"></script>
       <script src="/js/jquery.mobile.iscrollview.js"></script> <!-- Optional -->
