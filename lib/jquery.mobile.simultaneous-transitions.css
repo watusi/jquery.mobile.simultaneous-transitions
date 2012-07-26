@@ -1,7 +1,7 @@
 /*
 jquery.mobile.simultaneous-transitions.css
 Add transitions in JQuery Mobile 1.1.1. with simultaneous transitions from 1.0.1 (with -sim suffix)
-Versiion 1.0.1
+Versiion 1.0.2
 Simultaneous transitions adapted from jQuery Mobile 1.0.1 for use with jQuery Mobile 1.1.1
 Copyright (c), 2012 Watusiware Corporation
 Distributed under the MIT License
@@ -20,130 +20,128 @@ Distributed under the MIT License
   -webkit-animation-duration: 350ms;
 }
 
-
-
 .slide-sim.out {
   -webkit-transform: translateX(-100%);
-  -webkit-animation-name: slideoutsimtoleft;
+  -webkit-animation-name: slideouttoleft-sim;
 }
 
 .slide-sim.in {
   -webkit-transform: translateX(0);
-  -webkit-animation-name: slideinsimfromright;
+  -webkit-animation-name: slideinfromright-sim;
 }
 
 .slide-sim.out.reverse {
   -webkit-transform: translateX(100%);
-  -webkit-animation-name: slideoutsimtoright;
+  -webkit-animation-name: slideouttoright-sim;
 }
 
 .slide-sim.in.reverse {
   -webkit-transform: translateX(0);
-  -webkit-animation-name: slideinsimfromleft;
+  -webkit-animation-name: slideinfromleft-sim;
 }
 
 .slideup-sim.out {
-  -webkit-animation-name: dontmovesim;
+  -webkit-animation-name: dontmove-sim;
   z-index: 0;
 }
 
 .slideup-sim.in {
   -webkit-transform: translateY(0);
-  -webkit-animation-name: slideinsimfrombottom;
+  -webkit-animation-name: slideinfrombottom-sim;
   z-index: 10;
 }
 
 .slideup-sim.in.reverse {
   z-index: 0;
-  -webkit-animation-name: dontmovesim;
+  -webkit-animation-name: dontmove-sim;
 }
 
 .slideup-sim.out.reverse {
   -webkit-transform: translateY(100%);
   z-index: 10;
-  -webkit-animation-name: slideoutsimtobottom;
+  -webkit-animation-name: slideouttobottom-sim;
 }
 
 .slidedown-sim {
-  -webkit-animation-name: dontmove;
+  -webkit-animation-name: dontmove-sim;
   z-index: 0;
 }
 
 .slidedown-sim.in {
   -webkit-transform: translateY(0);
-  -webkit-animation-name: slideinsimfromtop;
+  -webkit-animation-name: slideinfromtop-sim;
   z-index: 10;
 }
 
 .slidedown-sim.in.reverse {
   z-index: 0;
-  -webkit-animation-name: dontmovesim;
+  -webkit-animation-name: dontmove-sim;
 }
 
 .slidedown-sim.out.reverse {
   -webkit-transform: translateY(-100%);
   z-index: 10;
-  -webkit-animation-name: slideoutsimtotop;
+  -webkit-animation-name: slideouttotop-sim;
 }
 
-@-webkit-keyframes slideinsimfromright {
+@-webkit-keyframes slideinfromright-sim {
     from { -webkit-transform: translateX(100%); }
     to { -webkit-transform: translateX(0); }
 }
 
-@-webkit-keyframes slideinsimfromleft {
+@-webkit-keyframes slideinfromleft-sim {
     from { -webkit-transform: translateX(-100%); }
     to { -webkit-transform: translateX(0); }
 }
 
-@-webkit-keyframes slideoutsimtoleft {
+@-webkit-keyframes slideouttoleft-sim {
     from { -webkit-transform: translateX(0); }
     to { -webkit-transform: translateX(-100%); }
 }
 
-@-webkit-keyframes slideoutsimtoright {
+@-webkit-keyframes slideouttoright-sim {
     from { -webkit-transform: translateX(0); }
     to { -webkit-transform: translateX(100%); }
 }
 
-@-webkit-keyframes slideinsimfromtop {
+@-webkit-keyframes slideinfromtop-sim {
     from { -webkit-transform: translateY(-100%); }
     to { -webkit-transform: translateY(0); }
 }
 
-@-webkit-keyframes slideinsimfrombottom {
+@-webkit-keyframes slideinfrombottom-sim {
     from { -webkit-transform: translateY(100%); }
     to { -webkit-transform: translateY(0); }
 }
 
-@-webkit-keyframes slideoutsimtobottom {
+@-webkit-keyframes slideouttobottom-sim {
     from { -webkit-transform: translateY(0); }
     to { -webkit-transform: translateY(100%); }
 }
 
-@-webkit-keyframes slideoutsimtotop {
+@-webkit-keyframes slideouttotop-sim {
     from { -webkit-transform: translateY(0); }
     to { -webkit-transform: translateY(-100%); }
 }
-@-webkit-keyframes fadeinsim {
+@-webkit-keyframes fadein-sim {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-@-webkit-keyframes fadeoutsim {
+@-webkit-keyframes fadeout-sim {
     from { opacity: 1; }
     to { opacity: 0; }
 }
 
 .fade-sim.out {
   z-index: 0;
-  -webkit-animation-name: fadeoutsim;
+  -webkit-animation-name: fadeout-sim;
 }
 
 .fade-sim.in {
   opacity: 1;
   z-index: 10;
-  -webkit-animation-name: fadeinsim;
+  -webkit-animation-name: fadein-sim;
 }
 
 .viewport-flip-sim {
@@ -159,50 +157,47 @@ Distributed under the MIT License
 
 .flip-sim.out {
   -webkit-transform: rotateY(-180deg) scale(.8);
-  -webkit-animation-name: flipoutsimtoleft;
+  -webkit-animation-name: flipouttoleft-sim;
 }
 
 .flip-sim.in {
   -webkit-transform: rotateY(0) scale(1);
-  -webkit-animation-name: flipinsimfromleft;
+  -webkit-animation-name: flipinfromleft-sim;
 }
 
 /* Shake it all about */
-
 .flip-sim.out.reverse {
   -webkit-transform: rotateY(180deg) scale(.8);
-  -webkit-animation-name: flipoutsimtoright;
+  -webkit-animation-name: flipouttoright-sim;
 }
 
 .flip-sim.in.reverse {
   -webkit-transform: rotateY(0) scale(1);
-  -webkit-animation-name: flipinsimfromright;
+  -webkit-animation-name: flipinfromright-sim;
 }
 
-@-webkit-keyframes flipinsimfromright {
+@-webkit-keyframes flipinfromright-sim {
     from { -webkit-transform: rotateY(-180deg) scale(.8); }
     to { -webkit-transform: rotateY(0) scale(1); }
 }
 
-@-webkit-keyframes flipinsimfromleft {
+@-webkit-keyframes flipinfromleft-sim {
     from { -webkit-transform: rotateY(180deg) scale(.8); }
     to { -webkit-transform: rotateY(0) scale(1); }
 }
 
-@-webkit-keyframes flipoutsimtoleft {
+@-webkit-keyframes flipouttoleft-sim {
     from { -webkit-transform: rotateY(0) scale(1); }
     to { -webkit-transform: rotateY(-180deg) scale(.8); }
 }
 
-@-webkit-keyframes flipoutsimtoright {
+@-webkit-keyframes flipouttoright-sim {
     from { -webkit-transform: rotateY(0) scale(1); }
     to { -webkit-transform: rotateY(180deg) scale(.8); }
 }
 
-
 /* Hackish, but reliable. */
-
-@-webkit-keyframes dontmovesim {
+@-webkit-keyframes dontmove-sim {
     from { opacity: 1; }
     to { opacity: 1; }
 }
@@ -214,23 +209,23 @@ Distributed under the MIT License
 .pop-sim.in {
   -webkit-transform: scale(1);
     opacity: 1;
-  -webkit-animation-name: popinsim;
+  -webkit-animation-name: popin-sim;
   z-index: 10;
 }
 
 .pop-sim.in.reverse {
   z-index: 0;
-  -webkit-animation-name: dontmovesim;
+  -webkit-animation-name: dontmove-sim;
 }
 
 .pop-sim.out.reverse {
   -webkit-transform: scale(.2);
   opacity: 0;
-  -webkit-animation-name: popoutsim;
+  -webkit-animation-name: popout-sim;
   z-index: 10;
 }
 
-@-webkit-keyframes popinsim {
+@-webkit-keyframes popin-sim {
     from {
         -webkit-transform: scale(.2);
         opacity: 0;
@@ -241,7 +236,7 @@ Distributed under the MIT License
     }
 }
 
-@-webkit-keyframes popoutsim {
+@-webkit-keyframes popout-sim {
     from {
         -webkit-transform: scale(1);
         opacity: 1;
