@@ -74,26 +74,43 @@ suffix of `-sim` to any of the transition names whereever you might use a transi
 
 Transitions Provided
 --------------------
-The repo provides the original 1.0 transitions:
 
-- slide
-- slideup
-- slidedown
-- fade
-- flip
-- pop
+=== Original 1.0 Transitions
 
-As well as these "bonus" transitions, which are not provided in either jQuery Mobile 1.0/1.01 or
-1.1/1.1.1:
+These are the transitions originally provided with jQuery Mobile 1.0. They are visually identical
+to the 1.0 transitions, and use the same timing. While jQuery Mobile 1.1 has transitions with
+the same names as these, they are not visually identical to the 1.0 transitions. These are.
 
-- slideover Slides *over* the outgoing page, like `slideup` and `slidedown`
+- 'slide'
+- 'slideup'
+- 'slidedown'
+- 'fade'
+- 'flip'
+- 'pop'
 
-It does not provide replacement transitions for additional transitions that were added in
-jQuery Mobile 1.1 or later.
+=== 1.1 Transitions Implemented as Simultaneous Transitions
 
-It currently only provides transitions for Webkit browsers. (Only webkit transitions were
+In a future release, I intend to provide the new transitions that were added in jQuery Mobile
+1.1, but using a simultaneous, rather than sequential transition handler.
+
+=== Round-Out Transitions
+
+These are transitions which are not included in jQuery Mobile 1.0 or 1.1. They "round out" the
+selection of transitions by providing logically-obvious alternatives.
+
+- 'slideover' Slides *over* the outgoing page, like `slideup` and `slidedown`
+
+=== Bonus Transitions
+
+ I intend to provide a small selection of "fancier" transitions (`cube`, etc.)
+
+
+Supported Browsers
+------------------
+This repo currently only provides transitions for Webkit browsers. (Only webkit transitions were
 provided with jQuery Mobile 1.0 and 1.0.1.) I do plan on adding transitions for other browsers
 in a future version.
+
 
 Optional Simple Transition Handler
 ----------------------------------
