@@ -93,9 +93,9 @@ the same names as these, they are not visually identical to the 1.0 transitions.
 In a future release, I intend to provide the new transitions that were added in jQuery Mobile
 1.1 (but not present in 1.0), but using a simultaneous, rather than sequential transition handler.
 
-### Compilmentary Transitions
+### Complementary Transitions
 
-These are transitions which are not included in jQuery Mobile 1.0 or 1.1. They compliment these
+These are transitions which are not included in jQuery Mobile 1.0 or 1.1. They complement these
 transitions by providing "missing" transitions which seem logically obvious.
 
 - `slideover` Slides *over* the outgoing page, like `slideup` and `slidedown`
