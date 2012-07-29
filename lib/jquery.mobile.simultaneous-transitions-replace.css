@@ -1,5 +1,5 @@
 /*
-jquery.mobile.simultaneous-transitions.css
+jquery.mobile.simultaneous-transitions-replace.css
 Replace default transitions in JQuery Mobile 1.1.1. with simultaneous transitions from 1.0.1
 Version 1.1
 Simultaneous transitions adapted from jQuery Mobile 1.0.1 for use with jQuery Mobile 1.1.1
@@ -11,6 +11,7 @@ Distributed under the MIT License
 /* We need greater specificity to override the .in, .out rules without
    affecting transitions we aren't overriding. */
 .slide.in, .slide.out,
+.slideover.in, .slideover.out,
 .slideup.in, .slideup.out,
 .slidedown.in, .slidedown.out,
 .fade.in, .fade.out,
@@ -43,6 +44,31 @@ Distributed under the MIT License
 .slide.in.reverse {
   -webkit-transform: translateX(0);
   -webkit-animation-name: slideinfromleft-sim;
+}
+
+/* Bonus transition: slideover
+   Similar to slideup, slidedown, slides *over* "out" page instead of animating it out
+*/
+.slideover.out {
+  -webkit-animation-name: dontmove-sim;
+  z-index: 0;
+}
+
+.slideover.in {
+  -webkit-transform: translateX(0);
+  -webkit-animation-name: slideinfromright-sim;
+  z-index: 10;
+}
+
+.slideover.in.reverse {
+  z-index: 0;
+  -webkit-animation-name: dontmove-sim;
+}
+
+.slideover.out.reverse {
+  -webkit-transform: translateX(100%);
+  z-index: 10;
+  -webkit-animation-name: slideouttoright-sim;
 }
 
 .slideup.out {

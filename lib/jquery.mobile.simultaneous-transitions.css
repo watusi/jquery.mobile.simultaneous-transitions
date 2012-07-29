@@ -9,6 +9,7 @@ Distributed under the MIT License
 @charset "utf-8";
 
 .slide-sim,
+.slideover-sim,
 .slideup-sim,
 .slidedown-sim,
 .fade-sim,
@@ -32,6 +33,31 @@ Distributed under the MIT License
 
 .slide-sim.out.reverse {
   -webkit-transform: translateX(100%);
+  -webkit-animation-name: slideouttoright-sim;
+}
+
+/* Bonus transition: slideover
+   Similar to slideup, slidedown, slides *over* "out" page instead of animating it out
+*/
+.slideover-sim.out {
+  -webkit-animation-name: dontmove-sim;
+  z-index: 0;
+}
+
+.slideover-sim.in {
+  -webkit-transform: translateX(0);
+  -webkit-animation-name: slideinfromright-sim;
+  z-index: 10;
+}
+
+.slideover-sim.in.reverse {
+  z-index: 0;
+  -webkit-animation-name: dontmove-sim;
+}
+
+.slideover-sim.out.reverse {
+  -webkit-transform: translateX(100%);
+  z-index: 10;
   -webkit-animation-name: slideouttoright-sim;
 }
 
