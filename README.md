@@ -75,7 +75,7 @@ suffix of `-sim` to any of the transition names whereever you might use a transi
 Transitions Provided
 --------------------
 
-=== Original 1.0 Transitions
+### Original 1.0 Transitions
 
 These are the transitions originally provided with jQuery Mobile 1.0. They are visually identical
 to the 1.0 transitions, and use the same timing. While jQuery Mobile 1.1 has transitions with
