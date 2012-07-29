@@ -81,26 +81,26 @@ These are the transitions originally provided with jQuery Mobile 1.0. They are v
 to the 1.0 transitions, and use the same timing. While jQuery Mobile 1.1 has transitions with
 the same names as these, they are not visually identical to the 1.0 transitions. These are.
 
-- 'slide'
-- 'slideup'
-- 'slidedown'
-- 'fade'
-- 'flip'
-- 'pop'
+- `slide`
+- `slideup`
+- `slidedown`
+- `fade`
+- `flip`
+- `pop`
 
-=== 1.1 Transitions Implemented as Simultaneous Transitions
+### 1.1 Transitions Implemented as Simultaneous Transitions
 
 In a future release, I intend to provide the new transitions that were added in jQuery Mobile
 1.1, but using a simultaneous, rather than sequential transition handler.
 
-=== Round-Out Transitions
+### Round-Out Transitions
 
 These are transitions which are not included in jQuery Mobile 1.0 or 1.1. They "round out" the
 selection of transitions by providing logically-obvious alternatives.
 
-- 'slideover' Slides *over* the outgoing page, like `slideup` and `slidedown`
+- `slideover` Slides *over* the outgoing page, like `slideup` and `slidedown`
 
-=== Bonus Transitions
+### Bonus Transitions
 
  I intend to provide a small selection of "fancier" transitions (`cube`, etc.)
 
