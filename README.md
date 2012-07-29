@@ -75,7 +75,7 @@ suffix of `-sim` to any of the transition names whereever you might use a transi
 Transitions Provided
 --------------------
 
-### Original 1.0 Transitions
+### Classic Transitions
 
 These are the transitions originally provided with jQuery Mobile 1.0. They are visually identical
 to the 1.0 transitions, and use the same timing. While jQuery Mobile 1.1 has transitions with
@@ -88,7 +88,7 @@ the same names as these, they are not visually identical to the 1.0 transitions.
 - `flip`
 - `pop`
 
-### 1.1 Transitions Implemented as Simultaneous Transitions
+### New Transitions
 
 In a future release, I intend to provide the new transitions that were added in jQuery Mobile
 1.1 (but not present in 1.0), but using a simultaneous, rather than sequential transition handler.
