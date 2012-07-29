@@ -83,6 +83,11 @@ The repo provides the original 1.0 transitions:
 - flip
 - pop
 
+As well as these "bonus" transitions, which are not provided in either jQuery Mobile 1.0/1.01 or
+1.1/1.1.1:
+
+- slideover Slides *over* the outgoing page, like `slideup` and `slidedown`
+
 It does not provide replacement transitions for additional transitions that were added in
 jQuery Mobile 1.1 or later.
 
