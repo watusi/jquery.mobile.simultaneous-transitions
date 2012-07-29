@@ -91,7 +91,7 @@ the same names as these, they are not visually identical to the 1.0 transitions.
 ### 1.1 Transitions Implemented as Simultaneous Transitions
 
 In a future release, I intend to provide the new transitions that were added in jQuery Mobile
-1.1, but using a simultaneous, rather than sequential transition handler.
+1.1 (but not present in 1.0), but using a simultaneous, rather than sequential transition handler.
 
 ### Round-Out Transitions
 
