@@ -1,7 +1,7 @@
 /*
 jquery.mobile.simultaneous-transitions-replace.css
 Replace default transitions in JQuery Mobile 1.1.1. with simultaneous transitions from 1.0.1
-Version 1.1.1
+Version 1.1.2
 Simultaneous transitions adapted from jQuery Mobile 1.0.1 for use with jQuery Mobile 1.1.1
 Copyright (c), 2012 Watusiware Corporation
 Distributed under the MIT License
@@ -21,7 +21,6 @@ Distributed under the MIT License
 .pop,in, .pop.out {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-duration: 350ms;
-  -webkit-animation-duration: 5s;
 }
 
 /* The slide transition (only) in JQM 1.1 is simultaneous (though with slightly different timing
