@@ -95,10 +95,13 @@ In a future release, I intend to provide the new transitions that were added in 
 
 ### Complementary Transitions
 
-These are transitions which are not included in jQuery Mobile 1.0 or 1.1. They complement these
-transitions by providing "missing" transitions which seem logically obvious.
+These are transitions which are not included in jQuery Mobile 1.0 or 1.1. They complement or
+round-out these transitions by providing "missing" transitions which seem logically obvious, but
+are not included in the defaut set of jQuery Mobile transitions.
 
 - `slideover` Slides *over* the outgoing page, like `slideup` and `slidedown`
+- `slidepushup` *Pushes* the outgoing page up, similar to `slide`.
+- `slidepushdown` *Pushes* the outgoing page down, similar to `slide`
 
 ### Bonus Transitions
 

@@ -12,6 +12,8 @@ Distributed under the MIT License
 .slideover-sim,
 .slideup-sim,
 .slidedown-sim,
+.slidepushup-sim,
+.slidepushdown-sim,
 .fade-sim,
 .flip-sim,
 .pop-sim
@@ -107,6 +109,50 @@ Distributed under the MIT License
 .slidedown-sim.out.reverse {
   -webkit-transform: translateY(-100%);
   z-index: 10;
+  -webkit-animation-name: slideouttotop-sim;
+}
+
+/* Complementary: slidepushup-sim, slidepushdown-sim
+   like slide - pushes "out" page, instead of sliding "in" page over
+   This is most appropriate for "in" and "out" pages with identical height */
+.slidepushup-sim.out {
+  -webkit-transform: translateY(-100%);
+  -webkit-animation-name: slideouttotop-sim;
+}
+
+.slidepushup-sim.in {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinfrombottom-sim;
+}
+
+.slidepushup-sim.in.reverse {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinfromtop-sim;
+}
+
+.slidepushup-sim.out.reverse {
+  -webkit-transform: translateY(100%);
+  -webkit-animation-name: slideouttobottom-sim;
+}
+
+.slidepushdown-sim.out {
+  -webkit-transform: translateY(100%);
+  -webkit-animation-name: slideouttobottom-sim;
+
+}
+
+.slidepushdown-sim.in {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinfromtop-sim;
+}
+
+.slidepushdown-sim.in.reverse {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name:slideinfrombottom-sim;
+}
+
+.slidepushdown-sim.out.reverse {
+  -webkit-transform: translateY(-100%);
   -webkit-animation-name: slideouttotop-sim;
 }
 

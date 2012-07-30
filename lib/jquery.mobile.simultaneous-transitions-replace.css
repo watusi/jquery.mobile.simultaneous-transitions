@@ -14,11 +14,14 @@ Distributed under the MIT License
 .slideover.in, .slideover.out,
 .slideup.in, .slideup.out,
 .slidedown.in, .slidedown.out,
+.slidepushup.in, .slidepushup.out,
+.slidepushdown.in, .slidepushdown.out,
 .fade.in, .fade.out,
 .flip.in, .flip.out,
 .pop,in, .pop.out {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-duration: 350ms;
+  -webkit-animation-duration: 5s;
 }
 
 /* The slide transition (only) in JQM 1.1 is simultaneous (though with slightly different timing
@@ -46,7 +49,7 @@ Distributed under the MIT License
   -webkit-animation-name: slideinfromleft-sim;
 }
 
-/* Bonus transition: slideover
+/* Complementary transition: slideover
    Similar to slideup, slidedown, slides *over* "out" page instead of animating it out
 */
 .slideover.out {
@@ -115,6 +118,52 @@ Distributed under the MIT License
   z-index: 10;
   -webkit-animation-name: slideouttotop-sim;
 }
+
+
+/* Complementary: slidepushup, slidepushdown
+   like slide - pushes "out" page, instead of sliding "in" page over
+   This is most appropriate for "in" and "out" pages with identical height */
+.slidepushup.out {
+  -webkit-transform: translateY(-100%);
+  -webkit-animation-name: slideouttotop-sim;
+}
+
+.slidepushup.in {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinfrombottom-sim;
+}
+
+.slidepushup.in.reverse {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinfromtop-sim;
+}
+
+.slidepushup.out.reverse {
+  -webkit-transform: translateY(100%);
+  -webkit-animation-name: slideouttobottom-sim;
+}
+
+.slidepushdown.out {
+  -webkit-transform: translateY(100%);
+  -webkit-animation-name: slideouttobottom-sim;
+
+}
+
+.slidepushdown.in {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name: slideinfromtop-sim;
+}
+
+.slidepushdown.in.reverse {
+  -webkit-transform: translateY(0);
+  -webkit-animation-name:slideinfrombottom-sim;
+}
+
+.slidepushdown.out.reverse {
+  -webkit-transform: translateY(-100%);
+  -webkit-animation-name: slideouttotop-sim;
+}
+
 
 /* Keyframe sets can't be overridden, at least in WebKit. The *first* keyframe set with a given
    name is the one used. Rather than split this file into two (so that one can be loaded before
