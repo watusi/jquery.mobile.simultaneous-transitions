@@ -99,7 +99,8 @@ These are transitions which are not included in jQuery Mobile 1.0 or 1.1. They c
 round-out these transitions by providing "missing" transitions which seem logically obvious, but
 are not included in the defaut set of jQuery Mobile transitions.
 
-- `slideover` Slides *over* the outgoing page, like `slideup` and `slidedown`
+- `slideover` Slides *over* the outgoing page, like `slideup` and `slidedown`, but slides left/right
+like `slide`
 - `slidepushup` *Pushes* the outgoing page up, similar to `slide`.
 - `slidepushdown` *Pushes* the outgoing page down, similar to `slide`
 
