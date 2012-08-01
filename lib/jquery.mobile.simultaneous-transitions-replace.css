@@ -1,7 +1,7 @@
 /*
 jquery.mobile.simultaneous-transitions-replace.css
 Replace default transitions in JQuery Mobile 1.1.1. with simultaneous transitions from 1.0.1
-Version 1.1.2
+Version 1.1.3
 Simultaneous transitions adapted from jQuery Mobile 1.0.1 for use with jQuery Mobile 1.1.1
 Copyright (c), 2012 Watusiware Corporation
 Distributed under the MIT License
@@ -12,8 +12,8 @@ Distributed under the MIT License
    affecting transitions we aren't overriding. */
 .slide.in, .slide.out,
 .slideover.in, .slideover.out,
-.slideup.in, .slideup.out,
-.slidedown.in, .slidedown.out,
+.slideup.in, .slideup.out, .slideup.in.reverse, .slideup.out.reverse,
+.slidedown.in, .slidedown.out, .slidedown.in.reverse, .slidedown.out.reverse,
 .slidepushup.in, .slidepushup.out,
 .slidepushdown.in, .slidepushdown.out,
 .fade.in, .fade.out,
