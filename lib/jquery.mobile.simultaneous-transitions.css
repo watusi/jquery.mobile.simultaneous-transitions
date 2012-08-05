@@ -1,7 +1,7 @@
 /*
 jquery.mobile.simultaneous-transitions.css
 Add transitions in JQuery Mobile 1.1.1. with simultaneous transitions from 1.0.1 (with -sim suffix)
-Versiion 1.1
+Version 1.2
 Simultaneous transitions adapted from jQuery Mobile 1.0.1 for use with jQuery Mobile 1.1.1
 Copyright (c), 2012 Watusiware Corporation
 Distributed under the MIT License
@@ -9,7 +9,8 @@ Distributed under the MIT License
 @charset "utf-8";
 
 .slide-sim,
-.slideover-sim,
+.slideoverleft-sim,
+slideoverright-sim,
 .slideup-sim,
 .slidedown-sim,
 .slidepushup-sim,
@@ -38,34 +39,56 @@ Distributed under the MIT License
   -webkit-animation-name: slideouttoright-sim;
 }
 
-/* Bonus transition: slideover
+.slide-sim.in.reverse {
+  -webkit-transform: translateX(0);
+  -webkit-animation-name: slideinfromleft-sim;
+}
+
+/* Complementary transition: slideoverleft, slideoverright
    Similar to slideup, slidedown, slides *over* "out" page instead of animating it out
 */
-.slideover-sim.out {
+.slideoverleft-sim.out {
   -webkit-animation-name: dontmove-sim;
   z-index: 0;
 }
 
-.slideover-sim.in {
+.slideoverleft-sim.in {
   -webkit-transform: translateX(0);
   -webkit-animation-name: slideinfromright-sim;
   z-index: 10;
 }
 
-.slideover-sim.in.reverse {
+.slideoverleft-sim.in.reverse {
   z-index: 0;
   -webkit-animation-name: dontmove-sim;
 }
 
-.slideover-sim.out.reverse {
+.slideoverleft-sim.out.reverse {
   -webkit-transform: translateX(100%);
   z-index: 10;
   -webkit-animation-name: slideouttoright-sim;
 }
 
-.slide-sim.in.reverse {
+.slideoverright-sim.out {
+  -webkit-animation-name: dontmove-sim;
+  z-index: 0;
+}
+
+.slideoverright-sim.in {
   -webkit-transform: translateX(0);
   -webkit-animation-name: slideinfromleft-sim;
+  z-index: 10;
+}
+
+.slideoverright-sim.in.reverse {
+  z-index: 0;
+  -webkit-animation-name: dontmove-sim;
+}
+
+.slideoverright-sim.out.reverse {
+  -webkit-transform: translateX(100%);
+  z-index: 10;
+  -webkit-animation-name: slideouttoleft-sim;
 }
 
 .slideup-sim.out {

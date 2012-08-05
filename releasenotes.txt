@@ -1,0 +1,9 @@
+jquery.mobile.simultaneous-transitions
+Release Notes
+
+1.2
+====
+- Replaced `slideover` transition with `slideoverleft` and `slideoverright`
+- Set fallback transitions
+- Bug fixes
+

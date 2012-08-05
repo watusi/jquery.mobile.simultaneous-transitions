@@ -1,5 +1,5 @@
-jquery.mobile.simultaneous-transitions, version 1.1.3
-=====================================================
+jquery.mobile.simultaneous-transitions, version 1.2
+===================================================
 
 Easy drop-in retrofit of simultaneous (1.0/jqTouch-like) transitions, and simple
 (simultaneous, non-scrolling) transition handler for jQuery Mobile 1.1.1 or
@@ -99,8 +99,8 @@ These are transitions which are not included in jQuery Mobile 1.0 or 1.1. They c
 round-out these transitions by providing "missing" transitions which seem logically obvious, but
 are not included in the defaut set of jQuery Mobile transitions.
 
-- `slideover` Slides *over* the outgoing page, like `slideup` and `slidedown`, but slides left/right
-like `slide`
+- `slideoverleft`, `slideoverright` Slides *over* the outgoing page, like `slideup` and `slidedown`,
+but slides left (or right) like `slide`
 - `slidepushup` *Pushes* the outgoing page up, similar to `slide`.
 - `slidepushdown` *Pushes* the outgoing page down, similar to `slide`
 
@@ -140,29 +140,6 @@ of `-sim`) or else replace the corresponding transitions with the same names.
 - jquery.mobile.simultaneous-transitions-replace-simple.js
 - jquery.mobile.simultaneous-transitions-simple.js
 
-
-Optional Transition Handler Fix (not recommended)
--------------------------------------------------
-*Note: This transition handler fix was included in this repo prior to the development of the
-simple transition handler. For optimal results, use the simple transition handler. I'm leaving
-it in the repo for the benefit of those who might like to use the latest, official, development
-version from the jQuery Mobile repo.*
-
-An additional set of CSS and JS files are provided that fix jQuery Mobile bug #4340. This fix
-replaces both the simultaneous and sequential transition handlers with new ones extracted from
-unreleased jQuery Mobile code (git master), which is expected to be included in a future release
-of jQuery Mobile. (> 1.1.1).
-
-This should be considered a temporary fix, untill these modified transition handlers are
-incorporated in an official release of jQuery Mobile. These fixes are needed on some browsers
-(notably iOS) for smooth, artifact-free transitions.
-
-Load `jquery.mobile.transition_handler-fix-4340.js` after loading `jquery.js` and before loading
-`jquery.mobile.simultaneous-transitions[-replace].js`.
-
-Load `jquery.mobile.transition)handler-fix-4340.css` after loading `jquery.mobile.css` or
-`jquery.mobile.structure.css`, and before loading
-`jquery.mobile.simultaneous-transitions[-replace].css`.
 
 TranslateZ(0) Hardware Acceleration Hack
 ----------------------------------------
@@ -227,12 +204,13 @@ Please be careful to observe the correct load order:
 
 Prereqisites
 ------------
-- jQuery Mobile, version 1.1.1
-- jQuery, version 1.6.4 or 1.7.1
+- jQuery Mobile, version 1.1.1 or later
+- jQuery, version 1.6.4 or 1.7.1 (1.7.2 if using JQM 1.2)
 
 Bugs and Enhancements
 ---------------------
-Please submit bug and enhancement requests via [jquery.mobile.simultaneous-transitions gitHub Issues](https://github.com/watusi/jquery.mobile.simultaneous-transitions/issues)
+Please submit bug and enhancement requests via
+[jquery.mobile.simultaneous-transitions gitHub Issues](https://github.com/watusi/jquery.mobile.simultaneous-transitions/issues)
 If you have developed code that you would like to have incorporated in a future release
 of this repo, please submit it for consideration via a gitHub pull request.
 
