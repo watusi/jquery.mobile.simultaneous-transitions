@@ -3,7 +3,7 @@ jquery.mobile.simultaneous-transitions, version 1.3
 
 Easy drop-in retrofit of simultaneous (1.0/jqTouch-like) transitions, and simple
 (simultaneous, non-scrolling) transition handler for jQuery Mobile 1.1.1 or
-later.
+1.2.
 
 Purpose
 -------
@@ -204,10 +204,11 @@ Please be careful to observe the correct load order:
 
 ```
 
-Prereqisites
-------------
-- jQuery Mobile, version 1.1.1 or later
-- jQuery, version 1.6.4 or 1.7.1 (1.7.2 if using JQM 1.2)
+Prerequisites
+-------------
+- jQuery Mobile, version 1.1.1 or 1.2
+- jQuery, version 1.6.4 through 1.8.1, as appropriate for your JQM version
+  (JQM 1.1.1 can use jQuery through 1.7.1, JQM 1.2 can use jQuery through 1.8.1)
 
 Bugs and Enhancements
 ---------------------
