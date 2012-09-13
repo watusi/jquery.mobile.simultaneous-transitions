@@ -1,4 +1,4 @@
-jquery.mobile.simultaneous-transitions, version 1.2
+jquery.mobile.simultaneous-transitions, version 1.3
 ===================================================
 
 Easy drop-in retrofit of simultaneous (1.0/jqTouch-like) transitions, and simple
@@ -81,6 +81,7 @@ These are the transitions originally provided with jQuery Mobile 1.0. They are v
 to the 1.0 transitions, and use the same timing. While jQuery Mobile 1.1 has transitions with
 the same names as these, they are not visually identical to the 1.0 transitions. These are.
 
+- `none`
 - `slide`
 - `slideup`
 - `slidedown`
@@ -120,7 +121,8 @@ Optional Simple Transition Handler
 ----------------------------------
 This repo provides an optional, simple simultaneous, non-scrolling transition handler. It is
 similar to the transition handler included with jQuery Mobile 1.0 or 1.0.1, but has been modified
-slightly to bring it up-to-date with jQuery Mobile 1.1.1.
+both to bring it up-to-date with jQuery Mobile 1.2. As well, it has been refactored and greatly
+simplified.
 
 The simultaneous transitions included in this repo work best when used with this simple transition
 handler.
