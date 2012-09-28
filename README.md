@@ -1,5 +1,5 @@
-jquery.mobile.simultaneous-transitions, version 1.3
-===================================================
+jquery.mobile.simultaneous-transitions, version 1.3.1
+=====================================================
 
 Easy drop-in retrofit of simultaneous (1.0/jqTouch-like) transitions, and simple
 (simultaneous, non-scrolling) transition handler for jQuery Mobile 1.1.1 or
@@ -194,7 +194,7 @@ Please be careful to observe the correct load order:
       <script src="/js/jquery.mobile-transition-handler-simple.js"></script>
       <script src="/js/jquery.mobile.simultaneous-transitions-replace-simple.js"></script>
       <script src="/jqmobile/jquery.mobile-1.1.1.min.js"></script>
-      <script src="/js/iscroll-4.2.js"></script> <!-- Optional -->
+      <script src="/js/iscroll.js"></script> <!-- Optional -->
       <script src="/js/jquery.mobile.iscrollview.js"></script> <!-- Optional -->
     </head>
 
