@@ -194,6 +194,7 @@ Please be careful to observe the correct load order:
       <script src="/js/jquery.mobile-transition-handler-simple.js"></script>
       <script src="/js/jquery.mobile.simultaneous-transitions-replace-simple.js"></script>
       <script src="/jqmobile/jquery.mobile-1.1.1.min.js"></script>
+      <script src="/js/iscroll-4.2.js"></script> <!-- Optional -->
       <script src="/js/jquery.mobile.iscrollview.js"></script> <!-- Optional -->
     </head>
 
