@@ -1,4 +1,4 @@
-jquery.mobile.simultaneous-transitions, version 1.3.1
+jquery.mobile.simultaneous-transitions, version 1.3.2
 =====================================================
 
 Easy drop-in retrofit of simultaneous (1.0/jqTouch-like) transitions, and simple
